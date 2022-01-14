@@ -16,13 +16,13 @@ namespace DAMLib.Database.MySql
         public MySqlAssetDatabase(ILoggerFactory loggerFactory, IOptions<MySqlOptions> options)
         {
             // Initialize logging
-            if(loggerFactory == null)
+            if (loggerFactory == null)
                 throw new ArgumentNullException(nameof(loggerFactory));
             _logger = loggerFactory.CreateLogger(nameof(MySqlAssetDatabase));
-            
+
             // Initialize options
             _options = options?.Value ?? throw new ArgumentNullException(nameof(options));
-            
+
             _logger.LogInformation(_options.ConnectionString);
         }
 
@@ -34,7 +34,7 @@ namespace DAMLib.Database.MySql
 
         public Task<IAssetRepository> GetAssetRepositoryAsync(int id)
         {
-            throw new System.NotImplementedException();
+            throw new NotImplementedException();
         }
     }
 }

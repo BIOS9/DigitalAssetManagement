@@ -8,7 +8,7 @@ namespace DAMLib.Abstractions
     {
         public int Id { get; }
         public DateTime DateAdded { get; }
-        
+
         public Task<IReadOnlyCollection<IAssetFile>> GetAllAssetFilesAsync();
         public Task<IAssetFile> GetAssetFileAsync(int id);
     }

@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+﻿using System.Threading.Tasks;
 using DAMLib.Abstractions;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
@@ -12,8 +9,8 @@ namespace DAMService.Controllers
     [Route("[controller]")]
     public class RepositoriesController : ControllerBase
     {
-        private readonly ILogger<RepositoriesController> _logger;
         private readonly IAssetDatabase _assetAssetDatabase;
+        private readonly ILogger<RepositoriesController> _logger;
 
         public RepositoriesController(ILogger<RepositoriesController> logger, IAssetDatabase assetDatabase)
         {

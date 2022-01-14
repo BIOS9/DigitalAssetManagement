@@ -27,18 +27,17 @@ namespace DAMLib.Database.MySql.Configuration
                     case 1042: // Unable to connect to any of the specified MySQL hosts (Check Server,Port)
                         return ValidateOptionsResult.Fail($"Failed to connect to MySql DB host. {ex.Message}");
                     case 0: // Access denied (Check DB name,username,password)
-                        return ValidateOptionsResult.Fail($"Failed to connect to MySql DB. Access denied. {ex.Message}");
+                        return ValidateOptionsResult.Fail(
+                            $"Failed to connect to MySql DB. Access denied. {ex.Message}");
                     default:
                         return ValidateOptionsResult.Fail($"Failed to connect to MySql DB. {ex.Message}");
                 }
             }
             finally
             {
-                if (conn?.State == ConnectionState.Open)
-                {
-                    conn.Close();
-                }
+                if (conn?.State == ConnectionState.Open) conn.Close();
             }
+
             return ValidateOptionsResult.Success;
         }
     }
