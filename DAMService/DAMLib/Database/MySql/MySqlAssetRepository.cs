@@ -10,9 +10,7 @@ namespace DAMLib.Database.MySql
         public int Id { get; }
         public string Name { get; }
         public DateTime DateAdded { get; }
-        
-        
-        
+
         public Task<IReadOnlyCollection<IAsset>> GetAllAssetsAsync()
         {
             throw new NotImplementedException();

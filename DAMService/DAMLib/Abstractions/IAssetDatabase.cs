@@ -3,7 +3,7 @@ using System.Threading.Tasks;
 
 namespace DAMLib.Abstractions
 {
-    public interface IDatabase
+    public interface IAssetDatabase
     {
         public Task<IReadOnlyCollection<IAssetRepository>> GetAllAssetRepositoriesAsync();
         public Task<IAssetRepository> GetAssetRepositoryAsync(int id);

@@ -1,6 +1,6 @@
 using System;
 
-namespace DAMLib.Database.MySql
+namespace DAMLib.Database.MySql.Configuration
 {
     public class MySqlOptions
     {
