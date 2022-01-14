@@ -15,7 +15,7 @@ namespace DAMLib.Database.MySql
         
         private readonly AssetRepositoryModel _model;
 
-        public MySqlAssetRepository(AssetRepositoryModel model)
+        internal MySqlAssetRepository(AssetRepositoryModel model)
         {
             _model = model ?? throw new ArgumentNullException(nameof(model));
         }
