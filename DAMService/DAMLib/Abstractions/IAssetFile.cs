@@ -2,7 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 
-namespace DAMLib
+namespace DAMLib.Abstractions
 {
     public interface IAssetFile
     {
