@@ -1,4 +1,5 @@
-﻿using System.Threading.Tasks;
+﻿using System.Collections.Generic;
+using System.Threading.Tasks;
 using DAMLib.Abstractions;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
@@ -19,10 +20,20 @@ namespace DAMService.Controllers
         }
 
         [HttpGet]
-        public async Task<string> Get()
+        public async Task<IEnumerable<IAssetRepository>> Get()
         {
-            await _assetAssetDatabase.GetAllAssetRepositoriesAsync();
-            return "test";
+            return await _assetAssetDatabase.GetAllAssetRepositoriesAsync();
+        }
+        
+        [HttpGet("{id}")]
+        public async Task<ActionResult<IAssetRepository>> Get(int id)
+        {
+            IAssetRepository repo = await _assetAssetDatabase.GetAssetRepositoryAsync(id);
+            if (repo == null)
+            {
+                return NotFound();
+            }
+            return new ActionResult<IAssetRepository>(repo);
         }
     }
 }
