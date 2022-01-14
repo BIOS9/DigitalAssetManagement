@@ -9,11 +9,11 @@ namespace DAMLib.Database.MySql.Configuration
     {
         public ValidateOptionsResult Validate(string name, MySqlOptions options)
         {
-            MySqlConnection conn = null;
+            MySqlConnection con = null;
             try
             {
-                conn = new MySqlConnection(options.ConnectionString);
-                conn.Open();
+                con = new MySqlConnection(options.ConnectionString);
+                con.Open();
             }
             catch (ArgumentException ex)
             {
@@ -35,7 +35,7 @@ namespace DAMLib.Database.MySql.Configuration
             }
             finally
             {
-                if (conn?.State == ConnectionState.Open) conn.Close();
+                if (con?.State == ConnectionState.Open) con.Close();
             }
 
             return ValidateOptionsResult.Success;
