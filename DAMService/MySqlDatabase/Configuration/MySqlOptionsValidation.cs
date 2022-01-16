@@ -3,7 +3,7 @@ using System.Data;
 using Microsoft.Extensions.Options;
 using MySql.Data.MySqlClient;
 
-namespace DAMLib.Database.MySql.Configuration
+namespace MySqlDatabase.Configuration
 {
     public class MySqlOptionsValidation : IValidateOptions<MySqlOptions>
     {

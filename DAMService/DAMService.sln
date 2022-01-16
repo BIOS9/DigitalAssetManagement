@@ -4,6 +4,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DAMService", "DAMService\DA
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DAMLib", "DAMLib\DAMLib.csproj", "{68B05B42-B2A9-4BC1-BD7F-7127D3CB1CCE}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MySqlDatabase", "MySqlDatabase\MySqlDatabase.csproj", "{BD827842-81DD-46C1-8724-A958E1E25944}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -18,5 +20,9 @@ Global
 		{68B05B42-B2A9-4BC1-BD7F-7127D3CB1CCE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{68B05B42-B2A9-4BC1-BD7F-7127D3CB1CCE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{68B05B42-B2A9-4BC1-BD7F-7127D3CB1CCE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BD827842-81DD-46C1-8724-A958E1E25944}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BD827842-81DD-46C1-8724-A958E1E25944}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BD827842-81DD-46C1-8724-A958E1E25944}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BD827842-81DD-46C1-8724-A958E1E25944}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

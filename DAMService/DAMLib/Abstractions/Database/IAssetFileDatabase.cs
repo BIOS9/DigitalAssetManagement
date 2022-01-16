@@ -1,14 +1,12 @@
 using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
+using DAMLib.Abstractions.Models;
 
-namespace DAMLib.Abstractions
+namespace DAMLib.Abstractions.Database
 {
-    public interface IAsset
+    public interface IAssetFileDatabase
     {
-        public int Id { get; }
-        public DateTime DateAdded { get; }
-
         public Task<IReadOnlyCollection<IAssetFile>> GetAllAssetFilesAsync();
         public Task<IAssetFile> GetAssetFileAsync(int id);
     }
