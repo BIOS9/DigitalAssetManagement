@@ -1,12 +1,12 @@
 using System;
 using DAMLib.Abstractions.Database;
-using DAMLib.Database.MySql.Configuration;
-using DAMLib.Database.MySql.Database;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
 using MySql.Data.MySqlClient;
+using MySqlDatabase.Configuration;
+using MySqlDatabase.Database;
 
-namespace DAMLib.Database.MySql
+namespace MySqlDatabase
 {
     public class MySqlDatabaseFactory : IDatabaseFactory
     {

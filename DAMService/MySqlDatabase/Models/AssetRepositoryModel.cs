@@ -1,8 +1,7 @@
 using System;
-using System.ComponentModel.DataAnnotations.Schema;
 using DAMLib.Abstractions.Models;
 
-namespace DAMLib.Database.MySql.Models
+namespace MySqlDatabase.Models
 {
     internal class AssetRepositoryModel : IAssetRepository
     {

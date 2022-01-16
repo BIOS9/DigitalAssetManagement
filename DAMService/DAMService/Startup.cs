@@ -1,11 +1,10 @@
-using DAMLib.Database.MySql.Helpers;
 using DAMService.JsonConverters;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using Org.BouncyCastle.Crypto.Digests;
+using MySqlDatabase.Helpers;
 
 namespace DAMService
 {

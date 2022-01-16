@@ -1,7 +1,7 @@
 using System;
 using MySql.Data.MySqlClient;
 
-namespace DAMLib.Database.MySql
+namespace MySqlDatabase
 {
     public class MySqlConnectionFactory
     {

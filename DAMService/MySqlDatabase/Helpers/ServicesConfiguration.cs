@@ -1,12 +1,10 @@
-using DAMLib.Abstractions;
 using DAMLib.Abstractions.Database;
-using DAMLib.Database.MySql.Configuration;
-using DAMLib.Database.MySql.Database;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Options;
+using MySqlDatabase.Configuration;
 
-namespace DAMLib.Database.MySql.Helpers
+namespace MySqlDatabase.Helpers
 {
     public static class ServicesConfiguration
     {

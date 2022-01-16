@@ -6,5 +6,6 @@
   </PropertyGroup>
   <ItemGroup>
     <ProjectReference Include="..\DAMLib\DAMLib.csproj" />
+    <ProjectReference Include="..\MySqlDatabase\MySqlDatabase.csproj" />
   </ItemGroup>
 </Project>

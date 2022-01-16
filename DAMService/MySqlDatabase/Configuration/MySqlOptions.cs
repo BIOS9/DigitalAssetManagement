@@ -1,4 +1,4 @@
-namespace DAMLib.Database.MySql.Configuration
+namespace MySqlDatabase.Configuration
 {
     public class MySqlOptions
     {

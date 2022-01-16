@@ -1,15 +1,14 @@
 using System;
 using System.Collections.Generic;
 using System.Collections.Immutable;
-using System.Linq;
 using System.Threading.Tasks;
 using DAMLib.Abstractions.Database;
 using DAMLib.Abstractions.Models;
-using DAMLib.Database.MySql.Models;
 using Dapper;
 using MySql.Data.MySqlClient;
+using MySqlDatabase.Models;
 
-namespace DAMLib.Database.MySql.Database
+namespace MySqlDatabase.Database
 {
     public class MySqlRepositoryDatabase : IRepositoryDatabase
     {
