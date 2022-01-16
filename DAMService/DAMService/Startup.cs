@@ -1,9 +1,11 @@
 using DAMLib.Database.MySql.Helpers;
+using DAMService.JsonConverters;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using Org.BouncyCastle.Crypto.Digests;
 
 namespace DAMService
 {
@@ -20,7 +22,13 @@ namespace DAMService
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddMySqlAssetDatabase(Configuration);
-            services.AddControllers();
+            services.AddControllers()
+                .AddJsonOptions(options =>
+                {
+                    options.JsonSerializerOptions.Converters.Add(new RepositoryConverter());
+                    options.JsonSerializerOptions.Converters.Add(new AssetConverter());
+                    options.JsonSerializerOptions.Converters.Add(new AssetFileConverter());
+                });
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
