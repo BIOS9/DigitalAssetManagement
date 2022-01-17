@@ -6,6 +6,10 @@
   </PropertyGroup>
   <ItemGroup>
     <ProjectReference Include="..\DAMLib\DAMLib.csproj" />
+    <ProjectReference Include="..\DummyPreviewPlugin\DummyPreviewPlugin.csproj" />
     <ProjectReference Include="..\MySqlDatabase\MySqlDatabase.csproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Remove="files.png" />
   </ItemGroup>
 </Project>

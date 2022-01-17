@@ -1,4 +1,5 @@
 using DAMService.JsonConverters;
+using DummyPreviewPlugin;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
@@ -21,6 +22,7 @@ namespace DAMService
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddMySqlAssetDatabase(Configuration);
+            services.AddDummyFilePreviews();
             services.AddControllers()
                 .AddJsonOptions(options =>
                 {

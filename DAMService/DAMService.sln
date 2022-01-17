@@ -6,6 +6,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DAMLib", "DAMLib\DAMLib.csp
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MySqlDatabase", "MySqlDatabase\MySqlDatabase.csproj", "{BD827842-81DD-46C1-8724-A958E1E25944}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DummyPreviewPlugin", "DummyPreviewPlugin\DummyPreviewPlugin.csproj", "{09B5D300-4C81-43EC-98B1-054AD41BBF10}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -24,5 +26,9 @@ Global
 		{BD827842-81DD-46C1-8724-A958E1E25944}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BD827842-81DD-46C1-8724-A958E1E25944}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BD827842-81DD-46C1-8724-A958E1E25944}.Release|Any CPU.Build.0 = Release|Any CPU
+		{09B5D300-4C81-43EC-98B1-054AD41BBF10}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{09B5D300-4C81-43EC-98B1-054AD41BBF10}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{09B5D300-4C81-43EC-98B1-054AD41BBF10}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{09B5D300-4C81-43EC-98B1-054AD41BBF10}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
