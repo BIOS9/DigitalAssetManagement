@@ -33,7 +33,12 @@ namespace DAMService.Controllers
         public async Task<IActionResult> GetFilePreview(int repositoryId, int assetId, int fileId, int? maxWidth, int? maxHeight)
         {
             IPreviewImage previewImage = await _previewImageFactory.GetPreviewImageAsync(repositoryId, assetId, fileId, maxWidth, maxHeight);
-            return File(await previewImage.GetPngImageStreamAsync(), "image/png");
+            Stream imageStream = await previewImage.GetPngImageStreamAsync();
+            if (imageStream == null)
+            {
+                return NotFound();
+            }
+            return File(imageStream, "image/png");
         }
     }
 }
