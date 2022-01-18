@@ -3,7 +3,7 @@ using System.Data;
 using Microsoft.Extensions.Options;
 using MySql.Data.MySqlClient;
 
-namespace MySqlDatabase.Configuration
+namespace MySql.Configuration
 {
     public class MySqlOptionsValidation : IValidateOptions<MySqlOptions>
     {

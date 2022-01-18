@@ -4,9 +4,13 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DAMService", "DAMService\DA
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DAMLib", "DAMLib\DAMLib.csproj", "{68B05B42-B2A9-4BC1-BD7F-7127D3CB1CCE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MySqlDatabase", "MySqlDatabase\MySqlDatabase.csproj", "{BD827842-81DD-46C1-8724-A958E1E25944}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DummyPreviewPlugin", "DummyPreviewPlugin\DummyPreviewPlugin.csproj", "{09B5D300-4C81-43EC-98B1-054AD41BBF10}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TagsMetadata", "TagsMetadata\TagsMetadata.csproj", "{B3E9A0F0-7B59-40F8-A405-90A8BA7E601A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MySql", "MySql\MySql.csproj", "{79AA23BD-9898-464F-B736-3D466C11B07E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AssetDatabase", "AssetDatabase\AssetDatabase.csproj", "{A23A92DD-571F-44BD-900C-67528EC13AAA}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -22,13 +26,21 @@ Global
 		{68B05B42-B2A9-4BC1-BD7F-7127D3CB1CCE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{68B05B42-B2A9-4BC1-BD7F-7127D3CB1CCE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{68B05B42-B2A9-4BC1-BD7F-7127D3CB1CCE}.Release|Any CPU.Build.0 = Release|Any CPU
-		{BD827842-81DD-46C1-8724-A958E1E25944}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{BD827842-81DD-46C1-8724-A958E1E25944}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{BD827842-81DD-46C1-8724-A958E1E25944}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{BD827842-81DD-46C1-8724-A958E1E25944}.Release|Any CPU.Build.0 = Release|Any CPU
 		{09B5D300-4C81-43EC-98B1-054AD41BBF10}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{09B5D300-4C81-43EC-98B1-054AD41BBF10}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{09B5D300-4C81-43EC-98B1-054AD41BBF10}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{09B5D300-4C81-43EC-98B1-054AD41BBF10}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B3E9A0F0-7B59-40F8-A405-90A8BA7E601A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B3E9A0F0-7B59-40F8-A405-90A8BA7E601A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B3E9A0F0-7B59-40F8-A405-90A8BA7E601A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B3E9A0F0-7B59-40F8-A405-90A8BA7E601A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{79AA23BD-9898-464F-B736-3D466C11B07E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{79AA23BD-9898-464F-B736-3D466C11B07E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{79AA23BD-9898-464F-B736-3D466C11B07E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{79AA23BD-9898-464F-B736-3D466C11B07E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A23A92DD-571F-44BD-900C-67528EC13AAA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A23A92DD-571F-44BD-900C-67528EC13AAA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A23A92DD-571F-44BD-900C-67528EC13AAA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A23A92DD-571F-44BD-900C-67528EC13AAA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

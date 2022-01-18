@@ -1,3 +1,4 @@
+using AssetDatabase.Helpers;
 using DAMService.JsonConverters;
 using DummyPreviewPlugin;
 using Microsoft.AspNetCore.Builder;
@@ -5,7 +6,8 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using MySqlDatabase.Helpers;
+using MySql.Helpers;
+using TagsMetadata;
 
 namespace DAMService
 {
@@ -21,14 +23,18 @@ namespace DAMService
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddMySqlAssetDatabase(Configuration);
+            services.AddMySql(Configuration);
+            services.AddAssetDatabase();
+            services.AddMetadataTags();
             services.AddDummyFilePreviews();
             services.AddControllers()
                 .AddJsonOptions(options =>
                 {
+                    options.JsonSerializerOptions.PropertyNameCaseInsensitive = true;
                     options.JsonSerializerOptions.Converters.Add(new RepositoryConverter());
                     options.JsonSerializerOptions.Converters.Add(new AssetConverter());
                     options.JsonSerializerOptions.Converters.Add(new AssetFileConverter());
+                    options.JsonSerializerOptions.Converters.Add(new FileWithMetadataConverter());
                 });
         }
 

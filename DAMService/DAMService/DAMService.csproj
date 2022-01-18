@@ -5,9 +5,12 @@
     <UserSecretsId>8ed0c61b-1dd8-4df1-9329-265f841c5150</UserSecretsId>
   </PropertyGroup>
   <ItemGroup>
+    <ProjectReference Include="..\AssetDatabase\AssetDatabase.csproj" />
     <ProjectReference Include="..\DAMLib\DAMLib.csproj" />
     <ProjectReference Include="..\DummyPreviewPlugin\DummyPreviewPlugin.csproj" />
     <ProjectReference Include="..\MySqlDatabase\MySqlDatabase.csproj" />
+    <ProjectReference Include="..\MySql\MySql.csproj" />
+    <ProjectReference Include="..\TagsMetadata\TagsMetadata.csproj" />
   </ItemGroup>
   <ItemGroup>
     <None Remove="files.png" />

@@ -2,20 +2,20 @@ using System;
 using System.Collections.Generic;
 using System.Collections.Immutable;
 using System.Threading.Tasks;
+using AssetDatabase.Models;
 using DAMLib.Abstractions.Database;
 using DAMLib.Abstractions.Models;
 using Dapper;
 using MySql.Data.MySqlClient;
-using MySqlDatabase.Models;
 
-namespace MySqlDatabase.Database
+namespace AssetDatabase.Database
 {
-    public class MySqlAssetDatabase : IAssetDatabase
+    public class AssetDatabase : IAssetDatabase
     {
         private readonly MySqlConnection _mySqlConnection;
         private readonly int _repositoryId;
         
-        internal MySqlAssetDatabase(MySqlConnection mySqlConnection, int repositoryId)
+        internal AssetDatabase(MySqlConnection mySqlConnection, int repositoryId)
         {
             _mySqlConnection = mySqlConnection ?? throw new ArgumentNullException(nameof(mySqlConnection));
             _repositoryId = repositoryId;

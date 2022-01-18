@@ -1,7 +1,7 @@
 using System;
 using DAMLib.Abstractions.Models;
 
-namespace MySqlDatabase.Models
+namespace AssetDatabase.Models
 {
     internal class AssetFileModel : IAssetFile
     {

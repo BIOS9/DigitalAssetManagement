@@ -1,4 +1,4 @@
-namespace MySqlDatabase.Configuration
+namespace MySql.Configuration
 {
     public class MySqlOptions
     {
