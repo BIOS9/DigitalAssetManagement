@@ -12,6 +12,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MySql", "MySql\MySql.csproj
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AssetDatabase", "AssetDatabase\AssetDatabase.csproj", "{A23A92DD-571F-44BD-900C-67528EC13AAA}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "MetadataPlugins", "MetadataPlugins", "{4E71E5BF-B15D-4985-B84D-D667D3E85CC6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DiskMetadata", "DiskMetadata\DiskMetadata.csproj", "{AD5CC0BC-80E3-4A90-8314-E91259733C87}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -42,5 +46,13 @@ Global
 		{A23A92DD-571F-44BD-900C-67528EC13AAA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A23A92DD-571F-44BD-900C-67528EC13AAA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A23A92DD-571F-44BD-900C-67528EC13AAA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AD5CC0BC-80E3-4A90-8314-E91259733C87}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AD5CC0BC-80E3-4A90-8314-E91259733C87}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AD5CC0BC-80E3-4A90-8314-E91259733C87}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AD5CC0BC-80E3-4A90-8314-E91259733C87}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{B3E9A0F0-7B59-40F8-A405-90A8BA7E601A} = {4E71E5BF-B15D-4985-B84D-D667D3E85CC6}
+		{AD5CC0BC-80E3-4A90-8314-E91259733C87} = {4E71E5BF-B15D-4985-B84D-D667D3E85CC6}
 	EndGlobalSection
 EndGlobal

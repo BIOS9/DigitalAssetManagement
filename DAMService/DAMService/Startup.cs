@@ -1,5 +1,6 @@
 using AssetDatabase.Helpers;
 using DAMService.JsonConverters;
+using DiskMetadata;
 using DummyPreviewPlugin;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -26,6 +27,7 @@ namespace DAMService
             services.AddMySql(Configuration);
             services.AddAssetDatabase();
             services.AddMetadataTags();
+            services.AddMetadataDisk();
             services.AddDummyFilePreviews();
             services.AddControllers()
                 .AddJsonOptions(options =>
