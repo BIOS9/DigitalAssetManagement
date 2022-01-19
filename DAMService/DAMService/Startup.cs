@@ -2,13 +2,13 @@ using AssetDatabase.Helpers;
 using DAMService.JsonConverters;
 using DiskAssetFileSource;
 using DiskMetadata;
-using DummyPreviewPlugin;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using MySql.Helpers;
+using OriginalPreviewPlugin;
 using TagsMetadata;
 
 namespace DAMService
@@ -29,7 +29,7 @@ namespace DAMService
             services.AddAssetDatabase();
             services.AddMetadataTags();
             services.AddMetadataDisk();
-            services.AddDummyFilePreviews();
+            services.AddOriginalFilePreviews();
             services.AddDiskAssetFileSource();
             services.AddControllers()
                 .AddJsonOptions(options =>

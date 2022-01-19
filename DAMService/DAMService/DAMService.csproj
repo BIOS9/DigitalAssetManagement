@@ -12,6 +12,7 @@
     <ProjectReference Include="..\DummyPreviewPlugin\DummyPreviewPlugin.csproj" />
     <ProjectReference Include="..\MySqlDatabase\MySqlDatabase.csproj" />
     <ProjectReference Include="..\MySql\MySql.csproj" />
+    <ProjectReference Include="..\OriginalPreviewPlugin\OriginalPreviewPlugin.csproj" />
     <ProjectReference Include="..\TagsMetadata\TagsMetadata.csproj" />
   </ItemGroup>
   <ItemGroup>
