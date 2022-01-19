@@ -33,7 +33,7 @@ namespace DiskAssetFileSource
             }
 
             string filePath = await GetFilePathAsync(con, fileId);
-            if (basePath == null)
+            if (filePath == null)
             {
                 throw new DataException($"Asset file is missing a path. File ID: {fileId}");
             }
@@ -46,14 +46,14 @@ namespace DiskAssetFileSource
         
         public async Task<string> GetRepositoryBasePathAsync(MySqlConnection connection, int repositoryId)
         {
-            return await connection.QuerySingleAsync<string>(
+            return await connection.QuerySingleOrDefaultAsync<string>(
                 "SELECT `base_path` FROM `repository_disk_info` WHERE `repository_id`=@repositoryId",
                 new { repositoryId });
         }
         
         public async Task<string> GetFilePathAsync(MySqlConnection connection, int fileId)
         {
-            return await connection.QuerySingleAsync<string>(
+            return await connection.QuerySingleOrDefaultAsync<string>(
                 "SELECT `path` FROM `asset_file_metadata_disk` WHERE `asset_file_id`=@fileId",
                 new { fileId });
         }
