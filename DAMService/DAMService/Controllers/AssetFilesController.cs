@@ -1,8 +1,10 @@
 ﻿ using System;
  using System.Collections.Generic;
-using System.Threading.Tasks;
+ using System.IO;
+ using System.Threading.Tasks;
 using DAMLib.Abstractions;
-using DAMLib.Abstractions.Database;
+ using DAMLib.Abstractions.Data;
+ using DAMLib.Abstractions.Database;
  using DAMLib.Abstractions.Metadata;
  using DAMLib.Abstractions.Models;
 using DAMService.JsonConverters;
@@ -10,8 +12,9 @@ using DAMService.JsonConverters;
  using Microsoft.AspNetCore.Mvc;
  using Microsoft.Extensions.DependencyInjection;
  using Microsoft.Extensions.Logging;
+ using Microsoft.Net.Http.Headers;
 
-namespace DAMService.Controllers
+ namespace DAMService.Controllers
 {
     [ApiController]
     [Route("/")]
@@ -20,11 +23,13 @@ namespace DAMService.Controllers
         private readonly IDatabaseFactory _databaseFactory;
         private readonly ILogger<AssetFilesController> _logger;
         private readonly IEnumerable<IMetadataSource> _metadataSources;
+        private readonly IAssetFileSource _fileSource;
 
-        public AssetFilesController(ILogger<AssetFilesController> logger, IDatabaseFactory databaseFactory, IServiceProvider services)
+        public AssetFilesController(ILogger<AssetFilesController> logger, IDatabaseFactory databaseFactory, IAssetFileSource fileSource, IServiceProvider services)
         {
             _logger = logger;
             _databaseFactory = databaseFactory;
+            _fileSource = fileSource;
             _metadataSources = services.GetServices<IMetadataSource>();
         }
         
@@ -57,6 +62,23 @@ namespace DAMService.Controllers
                 result.Metadata.Add(source.Name, metadataRecord);
             }
             return new ActionResult<FileWithMetadata>(result);
+        }
+        
+        [HttpGet("repositories/{repositoryId}/assets/{assetId}/files/{fileId}/original")]
+        public async Task<IActionResult> GetOriginalAssetFile(int repositoryId, int assetId, int fileId)
+        {
+             IFileData fileData = await _fileSource.GetFileDataAsync(repositoryId, assetId, fileId);
+             if (fileData == null)
+             {
+                 return NotFound();
+             }
+
+             Stream stream = await fileData.GetDataStreamAsync();
+             if (stream == null)
+             {
+                 return NotFound();
+             }
+             return new FileStreamResult(stream, MediaTypeHeaderValue.Parse(await fileData.GetMimeTypeAsync()));
         }
     }
 }

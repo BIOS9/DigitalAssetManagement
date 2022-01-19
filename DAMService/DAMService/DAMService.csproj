@@ -7,6 +7,7 @@
   <ItemGroup>
     <ProjectReference Include="..\AssetDatabase\AssetDatabase.csproj" />
     <ProjectReference Include="..\DAMLib\DAMLib.csproj" />
+    <ProjectReference Include="..\DiskAssetFileSource\DiskAssetFileSource.csproj" />
     <ProjectReference Include="..\DiskMetadata\DiskMetadata.csproj" />
     <ProjectReference Include="..\DummyPreviewPlugin\DummyPreviewPlugin.csproj" />
     <ProjectReference Include="..\MySqlDatabase\MySqlDatabase.csproj" />

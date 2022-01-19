@@ -1,5 +1,6 @@
 using AssetDatabase.Helpers;
 using DAMService.JsonConverters;
+using DiskAssetFileSource;
 using DiskMetadata;
 using DummyPreviewPlugin;
 using Microsoft.AspNetCore.Builder;
@@ -29,6 +30,7 @@ namespace DAMService
             services.AddMetadataTags();
             services.AddMetadataDisk();
             services.AddDummyFilePreviews();
+            services.AddDiskAssetFileSource();
             services.AddControllers()
                 .AddJsonOptions(options =>
                 {

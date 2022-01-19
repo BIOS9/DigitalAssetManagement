@@ -16,6 +16,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "MetadataPlugins", "Metadata
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DiskMetadata", "DiskMetadata\DiskMetadata.csproj", "{AD5CC0BC-80E3-4A90-8314-E91259733C87}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DiskAssetFileSource", "DiskAssetFileSource\DiskAssetFileSource.csproj", "{745D9794-2179-4758-BFC6-17D26C240356}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -50,6 +52,10 @@ Global
 		{AD5CC0BC-80E3-4A90-8314-E91259733C87}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{AD5CC0BC-80E3-4A90-8314-E91259733C87}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{AD5CC0BC-80E3-4A90-8314-E91259733C87}.Release|Any CPU.Build.0 = Release|Any CPU
+		{745D9794-2179-4758-BFC6-17D26C240356}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{745D9794-2179-4758-BFC6-17D26C240356}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{745D9794-2179-4758-BFC6-17D26C240356}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{745D9794-2179-4758-BFC6-17D26C240356}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{B3E9A0F0-7B59-40F8-A405-90A8BA7E601A} = {4E71E5BF-B15D-4985-B84D-D667D3E85CC6}
