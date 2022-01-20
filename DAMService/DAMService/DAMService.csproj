@@ -10,6 +10,7 @@
     <ProjectReference Include="..\DiskAssetFileSource\DiskAssetFileSource.csproj" />
     <ProjectReference Include="..\DiskMetadata\DiskMetadata.csproj" />
     <ProjectReference Include="..\DummyPreviewPlugin\DummyPreviewPlugin.csproj" />
+    <ProjectReference Include="..\GeneralMetadata\GeneralMetadata.csproj" />
     <ProjectReference Include="..\MySqlDatabase\MySqlDatabase.csproj" />
     <ProjectReference Include="..\MySql\MySql.csproj" />
     <ProjectReference Include="..\OriginalPreviewPlugin\OriginalPreviewPlugin.csproj" />

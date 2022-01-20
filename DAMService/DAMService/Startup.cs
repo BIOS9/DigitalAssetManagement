@@ -2,6 +2,7 @@ using AssetDatabase.Helpers;
 using DAMService.JsonConverters;
 using DiskAssetFileSource;
 using DiskMetadata;
+using GeneralMetadata;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
@@ -29,6 +30,7 @@ namespace DAMService
             services.AddAssetDatabase();
             services.AddMetadataTags();
             services.AddMetadataDisk();
+            services.AddMetadataGeneral();
             services.AddOriginalFilePreviews();
             services.AddDiskAssetFileSource();
             services.AddControllers()
