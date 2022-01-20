@@ -28,9 +28,9 @@ namespace DAMService
         {
             services.AddMySql(Configuration);
             services.AddAssetDatabase();
+            services.AddMetadataGeneral();
             services.AddMetadataTags();
             services.AddMetadataDisk();
-            services.AddMetadataGeneral();
             services.AddOriginalFilePreviews();
             services.AddDiskAssetFileSource();
             services.AddControllers()
