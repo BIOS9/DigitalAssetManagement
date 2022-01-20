@@ -34,7 +34,7 @@ namespace DiskMetadata
                 return null;
             }
 
-            return new DiskMetadata(diskMetadataModel.Path);
+            return new DiskMetadata(diskMetadataModel.Path, diskMetadataModel.OriginalFileName);
         }
     }
 }

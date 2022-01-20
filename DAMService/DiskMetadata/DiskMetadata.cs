@@ -9,10 +9,12 @@ namespace DiskMetadata
     public class DiskMetadata : IMetadataRecord
     {
         public readonly string Path;
+        public readonly string OriginalFileName;
 
-        public DiskMetadata(string path)
+        public DiskMetadata(string path, string originalFileName)
         {
             Path = path ?? throw new ArgumentNullException(nameof(path));
+            OriginalFileName = originalFileName ?? throw new ArgumentNullException(nameof(originalFileName));
         }
 
 
@@ -20,6 +22,7 @@ namespace DiskMetadata
         {
             writer.WriteStartObject();
             writer.WriteString("path", Path);
+            writer.WriteString("originalFileName", OriginalFileName);
             writer.WriteEndObject();
         }
     }
