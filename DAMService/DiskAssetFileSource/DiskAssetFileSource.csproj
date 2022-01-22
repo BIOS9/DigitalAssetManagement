@@ -6,6 +6,7 @@
 
     <ItemGroup>
       <ProjectReference Include="..\DAMLib\DAMLib.csproj" />
+      <ProjectReference Include="..\DiskMetadata\DiskMetadata.csproj" />
       <ProjectReference Include="..\MySql\MySql.csproj" />
     </ItemGroup>
 

@@ -5,6 +5,7 @@ using System.IO;
 using System.Threading.Tasks;
 using DAMLib.Abstractions.Data;
 using Dapper;
+using DiskMetadata;
 using Microsoft.Extensions.Logging;
 using MimeTypes;
 using MySql;
@@ -15,11 +16,13 @@ namespace DiskAssetFileSource
     public class DiskAssetFileSource : IAssetFileSource
     {
         private readonly MySqlConnectionFactory _mySqlConnectionFactory;
+        private readonly DiskMetadataProvider _diskMetadataProvider;
         private readonly ILoggerFactory _loggerFactory;
 
-        public DiskAssetFileSource(MySqlConnectionFactory mySqlConnectionFactory, ILoggerFactory loggerFactory)
+        public DiskAssetFileSource(MySqlConnectionFactory mySqlConnectionFactory, DiskMetadataProvider diskMetadataProvider, ILoggerFactory loggerFactory)
         {
             _mySqlConnectionFactory = mySqlConnectionFactory ?? throw new ArgumentNullException(nameof(mySqlConnectionFactory));
+            _diskMetadataProvider = diskMetadataProvider ?? throw new ArgumentNullException(nameof(diskMetadataProvider));
             _loggerFactory = loggerFactory;
         }
 
@@ -32,13 +35,13 @@ namespace DiskAssetFileSource
                 throw new DataException($"Repository is missing a base path. Repo ID: {repositoryId}");
             }
 
-            string filePath = await GetFilePathAsync(con, fileId);
-            if (filePath == null)
+            DiskMetadata.DiskMetadata diskMetadata = (DiskMetadata.DiskMetadata)await _diskMetadataProvider.GetAssetFileMetadataAsync(repositoryId, assetId, fileId);
+            if (diskMetadata == null)
             {
                 throw new DataException($"Asset file is missing a path. File ID: {fileId}");
             }
 
-            string fullPath = Path.Join(basePath, filePath);
+            string fullPath = Path.Join(basePath, diskMetadata.Path);
             string mimeType = MimeTypeMap.GetMimeType(Path.GetExtension(fullPath));
 
             return new DiskFileData(mimeType, fullPath, _loggerFactory);
@@ -49,13 +52,6 @@ namespace DiskAssetFileSource
             return await connection.QuerySingleOrDefaultAsync<string>(
                 "SELECT `base_path` FROM `repository_disk_info` WHERE `repository_id`=@repositoryId",
                 new { repositoryId });
-        }
-        
-        public async Task<string> GetFilePathAsync(MySqlConnection connection, int fileId)
-        {
-            return await connection.QuerySingleOrDefaultAsync<string>(
-                "SELECT `path` FROM `asset_file_metadata_disk` WHERE `asset_file_id`=@fileId",
-                new { fileId });
         }
     }
 }

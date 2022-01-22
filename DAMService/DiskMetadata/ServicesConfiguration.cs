@@ -8,6 +8,7 @@ namespace DiskMetadata
         public static void AddMetadataDisk(this IServiceCollection services)
         {
             services.AddScoped<IMetadataSource, DiskMetadataProvider>();
+            services.AddScoped<DiskMetadataProvider>();
         }
     }
 }
