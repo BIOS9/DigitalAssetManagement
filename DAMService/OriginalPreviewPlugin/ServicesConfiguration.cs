@@ -7,7 +7,7 @@ namespace OriginalPreviewPlugin
     {
         public static void AddOriginalFilePreviews(this IServiceCollection services)
         {
-            services.AddSingleton<IPreviewImageFactory, OriginalPreviewImageFactory>();
+            services.AddScoped<IPreviewImageFactory, OriginalPreviewImageFactory>();
         }
     }
 }

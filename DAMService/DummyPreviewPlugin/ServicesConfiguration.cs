@@ -10,7 +10,7 @@ namespace DummyPreviewPlugin
     {
         public static void AddDummyFilePreviews(this IServiceCollection services)
         {
-            services.AddSingleton<IPreviewImageFactory, DummyPreviewImageFactory>();
+            services.AddScoped<IPreviewImageFactory, DummyPreviewImageFactory>();
         }
     }
 }

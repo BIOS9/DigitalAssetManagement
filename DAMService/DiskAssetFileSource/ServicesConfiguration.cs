@@ -7,7 +7,7 @@ namespace DiskAssetFileSource
     {
         public static void AddDiskAssetFileSource(this IServiceCollection services)
         {
-            services.AddSingleton<IAssetFileSource, DiskAssetFileSource>();
+            services.AddScoped<IAssetFileSource, DiskAssetFileSource>();
         }
     }
 }
