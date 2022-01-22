@@ -8,6 +8,7 @@ namespace GeneralMetadata
         public static void AddMetadataGeneral(this IServiceCollection services)
         {
             services.AddScoped<IMetadataSource, GeneralMetadataProvider>();
+            services.AddScoped<GeneralMetadataProvider>();
         }
     }
 }

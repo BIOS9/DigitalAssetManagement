@@ -8,6 +8,7 @@ namespace TagsMetadata
         public static void AddMetadataTags(this IServiceCollection services)
         {
             services.AddScoped<IMetadataSource, TagsMetadataProvider>();
+            services.AddScoped<TagsMetadataProvider>();
         }
     }
 }
